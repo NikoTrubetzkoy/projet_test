@@ -1,1 +1,36 @@
-// feuille de style CSS
+/* feuille de style CSS projet1*/
+
+h1 {
+    text-align: center ;
+}
+
+p {
+    
+    text-indent: 10px ;
+}
+ span {
+    width: 75%;
+    text-indent: 50px;
+    align-content: center;
+    display: inline ;
+    background-color: lightgrey ;
+    font-family: "Courier New", monospace ;
+ }
+
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:azure;
+    width: 100vw ;
+    height: 100vh;
+ }
+
+ .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    width: 200px ;
+    height: 200px;
+ }
