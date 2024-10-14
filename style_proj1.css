@@ -5,15 +5,14 @@ h1 {
 }
 
 p {
-    
     text-indent: 10px ;
 }
  span {
-    width: 75%;
+    width: 100%;
     text-indent: 50px;
     align-content: center;
-    display: inline ;
-    background-color: lightgrey ;
+    display: inline-block ;
+    background-color:beige ;
     font-family: "Courier New", monospace ;
  }
 

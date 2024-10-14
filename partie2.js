@@ -56,7 +56,7 @@ const percentageWorld2 = function (population) {
 }
 
 console.log( `Palestinian population amounts to ${percentageWorld2(PalestinePop)} of world population.\n\
-    Kurdish population amounts to ${percentageWorld2(KurdistanPop)} of world population.`)
+    Kurdish population amounts to ${percentageWorld2(KurdistanPop)} of world population.`);
 
 /* Les fonctions peuvent être exportées dans un autre fichier de module
 qui comportera la mention 'export default function myFunctionName(params)',
@@ -67,4 +67,16 @@ et dans le HTML on ajoute l'attribut " type='module' ".
 const percentageWorld3 = (population) => population / 7900 * 100 ;
 const KurdPercent = percentageWorld3(KurdistanPop);
 
-console.log( `Kurds are ${KurdPercent}% of world population.`)
+console.log( `Kurds are ${KurdPercent}% of world population.`);
+
+function describePop(country, population) {
+  return `${country} has a population of ${population} millions.\n\
+  It amounts to ${percentageWorld2(population)} of world population.`;
+}
+
+let description1 = `${describePop('Palestine', PalestinePop)}`;
+let description2 = `${describePop('Kurdistan', KurdistanPop)}`;
+
+console.log(description1);
+console.log(description2);
+

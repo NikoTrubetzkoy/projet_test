@@ -52,6 +52,8 @@ TurkeyNeighbors[TurkeyNeighbors.indexOf("Kurdistan")] =
 
 console.log(TurkeyNeighbors);
 
+TurkeyNeighbors.pop();
+
 // Exercices sur les objets
 
 const myCountry = {
@@ -61,3 +63,29 @@ const myCountry = {
   population: 84.98,
   neighbors: TurkeyNeighbors,
 };
+
+console.log(`${myCountry.country} has ${myCountry.population} millions people.\n\
+    Its language has ISO code :'${myCountry.language}.\n\
+    It has ${myCountry.neighbors.length} neighboring countries.\n\
+    Its capital is ${myCountry.capital}.`);
+
+myCountry.population += 2;
+// console.log(myCountry.population);
+
+myCountry["population"] -= 2;
+// console.log(myCountry.population);
+
+const personalInfo = {
+  firstName: "Henry",
+  lastName: "De St-Roy",
+  birthYear: 1977,
+  birthPlace: "Leuwen",
+  job: "Situationist",
+  relativesFirstName: ["Eusebe", "Achilles", "Demosthenes"],
+  getSummary: function () {
+    return `${this.firstName} ${this.lastName} was born in ${this.birthYear} in ${this.birthPlace}.\n\
+He is a ${this.job} and his relatives' names are : "${this.relativesFirstName}"`;
+  },
+};
+
+console.log(personalInfo.getSummary());
