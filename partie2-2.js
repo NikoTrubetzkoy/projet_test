@@ -56,7 +56,8 @@ TurkeyNeighbors.pop();
 
 // Exercices sur les objets
 
-const myCountry = {
+/*
+  const myCountry = {
   country: "Turkey (Türkiye)",
   capital: "Ankara",
   language: "TR_tr",
@@ -74,6 +75,9 @@ myCountry.population += 2;
 
 myCountry["population"] -= 2;
 // console.log(myCountry.population);
+*/
+
+let myYear = 2024;
 
 const personalInfo = {
   firstName: "Henry",
@@ -82,10 +86,46 @@ const personalInfo = {
   birthPlace: "Leuwen",
   job: "Situationist",
   relativesFirstName: ["Eusebe", "Achilles", "Demosthenes"],
+  getAge: function (currentYear) {
+    this.age = currentYear - this.birthYear;
+    return this.age;
+  },
   getSummary: function () {
-    return `${this.firstName} ${this.lastName} was born in ${this.birthYear} in ${this.birthPlace}.\n\
-He is a ${this.job} and his relatives' names are : "${this.relativesFirstName}"`;
+    return `${this.firstName} ${this.lastName} was born in ${
+      this.birthYear
+    } in ${this.birthPlace}.\n\
+He is ${this.getAge(myYear)}, works as a ${
+      this.job
+    } and his relatives' names are : "${this.relativesFirstName}"`;
   },
 };
 
 console.log(personalInfo.getSummary());
+
+const myCountry = {
+  country: "Turkey (Türkiye)",
+  capital: "Ankara",
+  language: "TR_tr",
+  population: 84.98,
+  neighbors: TurkeyNeighbors,
+  describeCountry: function () {
+    console.log(`${this.country} has ${this.population} millions people.\n\
+      Its language has ISO code :'${this.language}.\n\
+      It has ${this.neighbors.length} neighboring countries.\n\
+      Its capital is ${this.capital}.`);
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbors.length === 0 ? true : false;
+    return this.isIsland;
+  },
+};
+
+myCountry.describeCountry();
+
+console.log(
+  `They say ${
+    myCountry.country
+  } is an island ; that is ${myCountry.checkIsland()} !!`
+);
+
+console.log(myCountry);

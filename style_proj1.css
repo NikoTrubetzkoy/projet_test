@@ -1,35 +1,49 @@
 /* feuille de style CSS projet1*/
 
 h1 {
-    text-align: center ;
+   text-align: center ;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   color:chocolate;
+   background-color: darkblue;
+}
+
+div {
+   width: 100%;
+   align-content: center;
+   display: inline-block ;
+   background-color:beige ;
 }
 
 p {
-    text-indent: 10px ;
+   text-indent: 2em ;
+   font-family: monospace ;
+   font-size: 1.5em;
 }
- span {
-    width: 100%;
-    text-indent: 50px;
-    align-content: center;
-    display: inline-block ;
-    background-color:beige ;
-    font-family: "Courier New", monospace ;
- }
 
  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:azure;
-    width: 100vw ;
-    height: 100vh;
- }
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color:azure;
+   width: 100vw ;
+   height: 25%;
+}
 
  .box {
-    display: flex;
+   display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: blueviolet;
-    width: 200px ;
-    height: 200px;
+   align-items: center;
+   background-color: blueviolet;
+   width: 200px ;
+   height: 200px;
+}
+ .box1{
+   display: flex;
+    justify-content: center;
+   align-items: center;
+   background-color: blueviolet;
+   width: 33% ;
+   height: 20%;
+   border: 2px solid red;
+   border-radius: 10px ;
  }
